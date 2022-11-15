@@ -1,5 +1,6 @@
 <template>
   <h2>{{ customedTitle }}</h2>
+  <p data-testid="counter"> {{ counter }} </p>
   <p> {{ counter }} <sup>2</sup> = {{ counter * counter }} </p>
 
   <!-- <p> {{ counter }} <sup>2</sup> = {{ squareCounter }} </p>
@@ -27,9 +28,9 @@ export default {
     start: { // mas control sobre la prop
       type: Number,
       default: 100,
-      validator(value) {
-        return value > 100;
-      }
+      // validator(value) {
+      //   return value > 100;
+      // }
       // required: true
     }
   },
